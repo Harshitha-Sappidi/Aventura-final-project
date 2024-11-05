@@ -1,0 +1,14 @@
+[
+  {
+    "userId": "u1",
+    "username": "john_doe",
+    "email": "john.doe@example.com",
+    "id": "655cf29ca5b8c0ae74ec699f"
+  },
+  {
+    "userId": "u2",
+    "username": "sam_doe",
+    "email": "sam.doe@example.com",
+    "id": "655cf29ca5b8c0ae74ec699b"
+  }
+]

@@ -1,0 +1,49 @@
+.comment-section {
+  border: 1px solid #f4efef;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 700px;
+  max-width: 100%;
+  margin-left: 34px;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 12px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.comment-header {
+  text-align: center;
+  font-size: 1.5em;
+
+  @media (max-width: 480px) {
+    font-size: 1.2em;
+  }
+}
+
+.dividerContainer {
+  margin: 16px 0;
+
+  @media (max-width: 480px) {
+    margin: 12px 0;
+  }
+}
+
+.blueLine {
+  width: 100%;
+  height: 2px;
+  background-color: blue;
+  margin-bottom: 8px;
+
+  @media (max-width: 480px) {
+    height: 1px;
+    margin-bottom: 6px;
+  }
+}

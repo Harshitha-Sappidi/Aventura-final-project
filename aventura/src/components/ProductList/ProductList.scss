@@ -1,0 +1,25 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+  gap: 16px;
+  padding: 0 16px; /* Padding on the left and right */
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+    padding: 0 8px; /* Adjust padding for smaller screens */
+  }
+}
+
+.product-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+
+  @media (max-width: 768px) {
+    margin-bottom: 16px; /* Add spacing between items on smaller screens */
+  }
+}

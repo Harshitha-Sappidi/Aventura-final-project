@@ -1,0 +1,32 @@
+.review-form {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    width: 100%;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .form-field {
+    flex: 1 1 48%;
+    min-width: 300px;
+    margin-bottom: 1rem !important;
+  
+    &.full-width {
+      flex: 1 1 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .form-field {
+      flex: 1 1 100%;
+      min-width: auto;
+    }
+  }
+  

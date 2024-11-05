@@ -1,0 +1,54 @@
+meta {
+  name: Create Blog
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:3000/blogs
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+    "blogId": "15",
+    "title": "3 Must-Visit Destinations for Every Adventure Seeker",
+    "date": "2024-08-11",
+    "imageUrl": "/src/assets/blogs/beach-stones.jpg",
+    "description": "If you’re an adventure seeker looking for your next thrilling destination, here are three must-visit places that should be on your bucket list. Each location offers unique experiences, breathtaking views, and the chance to immerse yourself in nature’s wonders. From remote beaches to rugged mountains, these destinations promise memories that will last a lifetime.Don’t let the fear of the unknown hold you back. Embrace the excitement of exploration, and discover why these places are hailed as top choices for adventurers around the world. Whether it’s the serene beauty of untouched landscapes or the thrill of conquering new challenges, these destinations will inspire your inner explorer.",
+    "tags": ["Adventure", "Vacation"],
+    "category": "Reviews",
+    "author": {
+      "name": "ThemeDelight",
+      "profilePicture": "/src/assets/blogs/themedelight-author.png",
+      "bio": "ThemeDelight specializes in uncovering the best travel destinations for those with a passion for adventure and exploration."
+    },
+    "comments": [
+      {
+        "commentId": "110",
+        "commenterName": "Globetrotter",
+        "commenterPhoto": "/src/assets/authors/user4.webp",
+        "email": "globetrotter@example.com",
+        "date": "2024-08-11T14:00:00.000Z",
+        "content": "I’ve been to one of these places, and it was incredible! Can’t wait to visit the other two.",
+        "replies": []
+      },
+      {
+        "commentId": "111",
+        "commenterName": "Travel Enthusiast",
+        "commenterPhoto": "/src/assets/authors/user2.jpeg",
+        "email": "travel.enthusiast@example.com",
+        "date": "2024-08-11T16:15:00.000Z",
+        "content": "Thanks for the recommendations! Adding these to my travel list.",
+        "replies": []
+      }
+    ]
+  }
+  
+}

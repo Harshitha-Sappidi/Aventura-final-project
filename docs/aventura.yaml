@@ -1,0 +1,1120 @@
+openapi: 3.0.1
+info:
+  title: Aventura Website API
+  description: API specification for the adventure website project
+  version: 1.0.0
+paths:
+  /users:
+    get:
+      summary: Retrieve a list of users
+      responses:
+        '200':
+          description: A list of users
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserWithoutPassword'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Create a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserWithoutID'
+      responses:
+        '201':
+          description: User created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserWithoutPassword'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /users/{userId}:
+    get:
+      summary: Retrieve a specific user by ID
+      parameters:
+        - in: path
+          name: userId
+          required: true
+          schema:
+            type: string
+          description: The ID of the user
+      responses:
+        '200':
+          description: A single user
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserWithoutPassword'
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update a specific user by ID
+      parameters:
+        - in: path
+          name: userId
+          required: true
+          schema:
+            type: string
+          description: The ID of the user
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserWithoutID'
+      responses:
+        '200':
+          description: User updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserWithoutPassword'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Delete a specific user by ID
+      parameters:
+        - in: path
+          name: userId
+          required: true
+          schema:
+            type: string
+          description: The ID of the user
+      responses:
+        '204':
+          description: User deleted successfully
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /adventures:
+    get:
+      summary: Retrieve a list of adventures
+      responses:
+        '200':
+          description: A list of adventures
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Adventure'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Create a new adventure
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdventureWithoutID'
+      responses:
+        '201':
+          description: Adventure created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Adventure'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /adventures/{adventureId}:
+    get:
+      summary: Retrieve a specific adventure by ID
+      parameters:
+        - in: path
+          name: adventureId
+          required: true
+          schema:
+            type: string
+          description: The ID of the adventure
+      responses:
+        '200':
+          description: A single adventure
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Adventure'
+        '404':
+          description: Adventure not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update a specific adventure by ID
+      parameters:
+        - in: path
+          name: adventureId
+          required: true
+          schema:
+            type: string
+          description: The ID of the adventure
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdventureWithoutID'
+      responses:
+        '200':
+          description: Adventure updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Adventure'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Adventure not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Delete a specific adventure by ID
+      parameters:
+        - in: path
+          name: adventureId
+          required: true
+          schema:
+            type: string
+          description: The ID of the adventure
+      responses:
+        '204':
+          description: Adventure deleted successfully
+        '404':
+          description: Adventure not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /bookings:
+    get:
+      summary: Retrieve a list of bookings
+      responses:
+        '200':
+          description: A list of bookings
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Booking'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Create a new booking
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookingWithoutID'
+      responses:
+        '201':
+          description: Booking created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Booking'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /bookings/{bookingId}:
+    get:
+      summary: Retrieve a specific booking by ID
+      parameters:
+        - in: path
+          name: bookingId
+          required: true
+          schema:
+            type: string
+          description: The ID of the booking
+      responses:
+        '200':
+          description: A single booking
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Booking'
+        '404':
+          description: Booking not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update a specific booking by ID
+      parameters:
+        - in: path
+          name: bookingId
+          required: true
+          schema:
+            type: string
+          description: The ID of the booking
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookingWithoutID'
+      responses:
+        '200':
+          description: Booking updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Booking'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Booking not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Delete a specific booking by ID
+      parameters:
+        - in: path
+          name: bookingId
+          required: true
+          schema:
+            type: string
+          description: The ID of the booking
+      responses:
+        '204':
+          description: Booking deleted successfully
+        '404':
+          description: Booking not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /trips:
+    get:
+      summary: Retrieve a list of trips
+      responses:
+        '200':
+          description: A list of trips
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Trip'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Create a new trip
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TripWithoutID'
+      responses:
+        '201':
+          description: Trip created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Trip'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /trips/{tripId}:
+    get:
+      summary: Retrieve a specific trip by ID
+      parameters:
+        - in: path
+          name: tripId
+          required: true
+          schema:
+            type: string
+          description: The ID of the trip
+      responses:
+        '200':
+          description: A single trip
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Trip'
+        '404':
+          description: Trip not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update a specific trip by ID
+      parameters:
+        - in: path
+          name: tripId
+          required: true
+          schema:
+            type: string
+          description: The ID of the trip
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TripWithoutID'
+      responses:
+        '200':
+          description: Trip updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Trip'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Trip not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Delete a specific trip by ID
+      parameters:
+        - in: path
+          name: tripId
+          required: true
+          schema:
+            type: string
+          description: The ID of the trip
+      responses:
+        '204':
+          description: Trip deleted successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserWithoutPassword'
+        '404':
+          description: Trip not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /orders:
+    get:
+      summary: Retrieve a list of orders
+      responses:
+        '200':
+          description: A list of orders
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Order'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Create a new order
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrderWithoutID'
+      responses:
+        '201':
+          description: Order created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /orders/{orderId}:
+    get:
+      summary: Retrieve a specific order by ID
+      parameters:
+        - in: path
+          name: orderId
+          required: true
+          schema:
+            type: string
+          description: The ID of the order
+      responses:
+        '200':
+          description: A single order
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+        '404':
+          description: Order not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update a specific order by ID
+      parameters:
+        - in: path
+          name: orderId
+          required: true
+          schema:
+            type: string
+          description: The ID of the order
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrderWithoutID'
+      responses:
+        '200':
+          description: Order updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Order not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Delete a specific order by ID
+      parameters:
+        - in: path
+          name: orderId
+          required: true
+          schema:
+            type: string
+          description: The ID of the order
+      responses:
+        '204':
+          description: Order deleted successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserWithoutPassword'
+        '404':
+          description: Order not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /forumposts:
+    get:
+      summary: Retrieve a list of forum posts
+      responses:
+        '200':
+          description: A list of forum posts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ForumPost'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Create a new forum post
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ForumPostWithoutID'
+      responses:
+        '201':
+          description: Forum post created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ForumPost'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /forumposts/{postId}:
+    get:
+      summary: Retrieve a specific forum post by ID
+      parameters:
+        - in: path
+          name: postId
+          required: true
+          schema:
+            type: string
+          description: The ID of the forum post
+      responses:
+        '200':
+          description: A single forum post
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ForumPost'
+        '404':
+          description: Forum post not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update a specific forum post by ID
+      parameters:
+        - in: path
+          name: postId
+          required: true
+          schema:
+            type: string
+          description: The ID of the forum post
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ForumPostWithoutID'
+      responses:
+        '200':
+          description: Forum post updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ForumPost'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Forum post not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Delete a specific forum post by ID
+      parameters:
+        - in: path
+          name: postId
+          required: true
+          schema:
+            type: string
+          description: The ID of the forum post
+      responses:
+        '204':
+          description: Forum post deleted successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserWithoutPassword'
+        '404':
+          description: Forum post not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "u1"
+        username:
+          type: string
+          example: "john_doe"
+        email:
+          type: string
+          format: email
+          example: "john.doe@example.com"
+        password:
+          type: string
+          format: password
+          example: "hashed_password"
+      required:
+        - username
+        - email
+        - password
+    UserWithoutPassword:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "u1"
+        username:
+          type: string
+          example: "john_doe"
+        email:
+          type: string
+          format: email
+          example: "john.doe@example.com"
+      required:
+        - username
+        - email
+    UserWithoutID:
+      type: object
+      properties:
+        username:
+          type: string
+          example: "john_doe"
+        email:
+          type: string
+          format: email
+          example: "john.doe@example.com"
+        password:
+          type: string
+          format: password
+          example: "hashed_password"
+      required:
+        - username
+        - email
+        - password
+    Adventure:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "a1"
+        name:
+          type: string
+          example: "Hiking in the Rockies"
+        description:
+          type: string
+          example: "A challenging hike through scenic mountain trails."
+        location:
+          type: string
+          example: "Rocky Mountains, USA"
+      required:
+        - name
+        - description
+        - location
+    AdventureWithoutID:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Hiking in the Rockies"
+        description:
+          type: string
+          example: "A challenging hike through scenic mountain trails."
+        location:
+          type: string
+          example: "Rocky Mountains, USA"
+      required:
+        - name
+        - description
+        - location
+    Booking:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "b1"
+        userId:
+          type: string
+          example: "u1"
+        adventureId:
+          type: string
+          example: "1"
+        bookingDate:
+          type: string
+          format: date-time
+          example: "2024-07-10T10:00:00Z"
+      required:
+        - userId
+        - adventureId
+        - bookingDate
+    BookingWithoutID:
+      type: object
+      properties:
+        userId:
+          type: string
+          example: "u1"
+        adventureId:
+          type: string
+          example: "1"
+        bookingDate:
+          type: string
+          format: date-time
+          example: "2024-07-10T10:00:00Z"
+      required:
+        - userId
+        - adventureId
+        - bookingDate
+    Trip:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "t1"
+        name:
+          type: string
+          example: "European Tour"
+        description:
+          type: string
+          example: "Explore Europe's cultural and historical landmarks."
+        startDate:
+          type: string
+          format: date-time
+          example: "2025-05-01T00:00:00Z"
+        endDate:
+          type: string
+          format: date-time
+          example: "2025-05-15T23:59:59Z"
+      required:
+        - name
+        - description
+        - startDate
+        - endDate
+    TripWithoutID:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "European Tour"
+        description:
+          type: string
+          example: "Explore Europe's cultural and historical landmarks."
+        startDate:
+          type: string
+          format: date-time
+          example: "2025-05-01T00:00:00Z"
+        endDate:
+          type: string
+          format: date-time
+          example: "2025-05-15T23:59:59Z"
+      required:
+        - name
+        - description
+        - startDate
+        - endDate
+    Order:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "o1"
+        userId:
+          type: string
+          example: "u1"
+        productId:
+          type: string
+          example: "5"
+        quantity:
+          type: integer
+          example: 2
+        totalPrice:
+          type: number
+          example: 50.99
+      required:
+        - userId
+        - productId
+        - quantity
+        - totalPrice
+    OrderWithoutID:
+      type: object
+      properties:
+        userId:
+          type: string
+          example: "u1"
+        productId:
+          type: string
+          example: "p5"
+        quantity:
+          type: integer
+          example: 2
+        totalPrice:
+          type: number
+          example: 50.99
+      required:
+        - userId
+        - productId
+        - quantity
+        - totalPrice
+    ForumPost:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "f1"
+        userId:
+          type: string
+          example: "u1"
+        title:
+          type: string
+          example: "Introduction to OpenAPI"
+        content:
+          type: string
+          example: "OpenAPI is a specification for building APIs."
+        createdAt:
+          type: string
+          format: date-time
+          example: "2024-07-10T12:00:00Z"
+      required:
+        - userId
+        - title
+        - content
+    ForumPostWithoutID:
+      type: object
+      properties:
+        userId:
+          type: string
+          example: "u1"
+        title:
+          type: string
+          example: "Introduction to OpenAPI"
+        content:
+          type: string
+          example: "OpenAPI is a specification for building APIs."
+        createdAt:
+          type: string
+          format: date-time
+          example: "2024-07-10T12:00:00Z"
+      required:
+        - userId
+        - title
+        - content
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              example: 400
+            message:
+              type: string
+              example: "Bad request"

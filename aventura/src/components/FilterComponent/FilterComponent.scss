@@ -1,0 +1,73 @@
+.filter-box {
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.filter-option {
+  margin-bottom: 0.5rem;
+
+  .MuiTypography-root {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .MuiSlider-root {
+    color: #007bff;
+  }
+
+  .MuiSelect-root {
+    border-radius: 4px;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+
+    &:hover {
+      background-color: #f1f1f1;
+    }
+  }
+}
+
+// Media queries for responsiveness
+@media (max-width: 768px) {
+  .filter-box {
+    padding: 1rem;
+  }
+
+  .filter-option {
+    margin-bottom: 0.75rem;
+
+    .MuiTypography-root {
+      font-size: 1rem;
+    }
+
+    .MuiSelect-root {
+      padding: 0.4rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .filter-box {
+    padding: 0.75rem;
+  }
+
+  .filter-option {
+    margin-bottom: 0.5rem;
+
+    .MuiTypography-root {
+      font-size: 0.9rem;
+    }
+
+    .MuiSelect-root {
+      padding: 0.3rem;
+    }
+  }
+}

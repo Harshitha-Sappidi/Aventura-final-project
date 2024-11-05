@@ -1,0 +1,80 @@
+.card-shop {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 95%; // Adjust the aspect ratio as needed
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.pt-shop {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: #47a0ff;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.separator {
+  border-top: 4px solid #47a0ff;
+  margin-top: 8px; // Consistent margin for all cards
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px !important;
+  height: 12rem;
+}
+
+.title {
+  margin-bottom: 8px;
+}
+
+.description {
+  flex-grow: 1;
+  margin-bottom: 16px;
+}
+
+.transparentLine {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 8px 0;
+}
+
+@media (max-width: 767px) {
+  .card-shop {
+    width: 100%;
+  }
+}

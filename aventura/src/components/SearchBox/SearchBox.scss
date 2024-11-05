@@ -1,0 +1,65 @@
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  width: 50%;
+
+  .MuiInputBase-root {
+    flex-grow: 1;
+    border-radius: 50px;
+    padding: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .MuiInputBase-input {
+      padding: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .search-box {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-box {
+    width: 70%;
+  }
+}
+
+@media (max-width: 576px) {
+  .search-box {
+    width: 80%;
+    margin: 15px auto;
+
+    .MuiInputBase-root {
+      padding: 0.4rem;
+    }
+
+    .MuiInputBase-input {
+      padding: 0.4rem;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .search-box {
+    width: 90%;
+    margin: 10px auto;
+
+    .MuiInputBase-root {
+      padding: 0.3rem;
+    }
+
+    .MuiInputBase-input {
+      padding: 0.3rem;
+    }
+  }
+}

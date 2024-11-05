@@ -1,0 +1,72 @@
+.blogTagsContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background-color: #fff;
+  margin-left: 12px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  width: 280px;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.dividerContainer {
+  position: relative;
+  width: 100%;
+  margin-top: 16px;
+
+  .blueLine {
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    background-color: rgb(71, 160, 255, 0.8);
+  }
+}
+
+.tagsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 16px 0 0 0;
+  width: 100%;
+
+  .tagItem {
+    margin: 6px;
+    padding: 7px 16px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.3s;
+
+    &:hover {
+      background-color: #e0e0e0;
+      transform: scale(1.05);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .tagItem {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+  }
+}
+
+.blogTagsTitle {
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}

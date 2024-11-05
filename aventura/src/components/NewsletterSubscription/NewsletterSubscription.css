@@ -1,0 +1,48 @@
+.newsletter-container {
+  background: url('/src/assets/newsletter-bg.avif') no-repeat center center;
+  background-size: cover;
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+
+  @media (max-width: 768px) {
+    padding: 30px 15px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px 10px;
+    background-size: contain;
+  }
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .email-input {
+    margin-right: 10px;
+    width: 300px;
+    background-color: #ffff;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  .subscribe-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    
+    &:hover {
+      background-color: rgb(4, 117, 4);
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}

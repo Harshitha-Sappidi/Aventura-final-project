@@ -1,0 +1,56 @@
+[
+    {
+        "adventureId": "adv1",
+        "title": "Mountain Adventure",
+        "description": "An exhilarating mountain adventure with breathtaking views and challenging trails.",
+        "oldPrice": 300,
+        "newPrice": 250,
+        "duration": "3 days",
+        "level": "Intermediate",
+        "ratings": 4,
+        "tags": ["DealsAndDiscounts", "MealsIncluded", "Sports", "USA", "Watersport", "WeatherDependent"],
+        "category": "Hiking",
+        "cardImage": "/src/assets/alaska-720x606.jpg", 
+        "destination": {
+            "city": "Denver",
+            "country": "USA",
+            "coordinates": "39.7392° N, 104.9903° W"
+        },
+        "details": {
+            "age": 18,
+            "availability": "All year round",
+            "detailDescription": "Join us for an unforgettable mountain adventure. Includes guided hikes, meals, and accommodation.",
+            "departureLocation": "Denver International Airport",
+            "departureTime": "07:00 AM",
+            "returnTime": "07:00 PM",
+            "essentials": ["Hiking boots", "Warm clothing", "Water bottle"],
+            "included": ["Meals", "Accommodation", "Guided tours"],
+            "notIncluded": ["Travel insurance", "Personal expenses"]
+        },
+        "itinerary": {
+            "activityItem": "Guided Mountain Hike",
+            "startTime": "09:00 AM",
+            "endTime": "05:00 PM",
+            "activityTitle": "Day 1: Mountain Hike",
+            "activityDescription": "A guided hike through the mountain trails with breathtaking views."
+        },
+        "reviewItems": [
+            {
+                "reviewItemId": "rev1",
+                "userId": "user1",
+                "userName": "John Doe",
+                "userPicture": "path/to/user/picture.jpg",
+                "userEmail": "john.doe@example.com",
+                "rating": 5,
+                "review": "This was an amazing adventure! The guides were knowledgeable and the views were spectacular."
+            }
+        ],
+        "images": [
+            {
+                "imageId": "img1",
+                "path": "/src/assets/alaska-720x606.jpg",
+                "altText": "A stunning view from the mountain trail."
+            }
+        ]
+    }
+]

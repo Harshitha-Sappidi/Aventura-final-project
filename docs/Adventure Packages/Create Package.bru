@@ -1,0 +1,100 @@
+meta {
+  name: Create Package
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/packages
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+    "packageId": "pkg56",
+    "title": "Whitewater Rafting",
+    "description": "Navigate the thrilling rapids of the Colorado River in this adrenaline-pumping rafting adventure.",
+    "oldPrice": 3000,
+    "newPrice": 2499,
+    "duration": 6,
+    "level": "Challenging",
+    "physicality": "8/10",
+    "ratings": 5,
+    "tags": ["Watersport", "Sports", "FamilyFriendly", "USA", "WeatherDependent"],
+    "category": "Rafting",
+    "cardImage": "/src/assets/rafting.jpg",
+    "ticketCount": 8,
+    "bookingCount": 10,
+    "destination": {
+      "city": "Moab",
+      "country": "USA",
+      "coordinates": "38.5733, -109.5498"
+    },
+    "details": {
+      "age": 12,
+      "detailDescription": "Join us for a thrilling whitewater rafting expedition on the Colorado River. This package includes guided rafting tours, safety gear, and family-friendly accommodations.",
+      "departureLocation": "Canyonlands Field Airport",
+      "departureTiming": "Arrive at least 3 hours before your scheduled departure.",
+      "availability": "Seasonal",
+      "essentials": ["swimsuit", "water shoes", "sunscreen"],
+      "included": ["rafting gear", "guides", "meals", "accommodation"],
+      "notIncluded": ["airfare", "personal expenses"]
+    },
+    "itinerary": [
+      {
+        "activityTitle": "Rafting the Colorado Rapids",
+        "activityDescription": "Experience the thrill of whitewater rafting on the Colorado River with expert guides."
+      },
+      {
+        "activityTitle": "Canyon Exploration",
+        "activityDescription": "Explore the stunning canyons surrounding the river, with opportunities for hiking and photography."
+      }
+    ],
+    "reviewItems": [
+      {
+        "reviewItemId": "rev015",
+        "userId": "user015",
+        "userName": "Mason Clark",
+        "userPicture": "/src/assets/authors/author-15.jpeg",
+        "userEmail": "mason.clark@example.com",
+        "rating": 5,
+        "review": "The rafting was an absolute blast! The guides were professional, and the rapids were intense.",
+        "reviewDate": "2023-06-10T00:00:00.000Z"
+      },
+      {
+        "reviewItemId": "rev016",
+        "userId": "user016",
+        "userName": "Olivia Johnson",
+        "userPicture": "/src/assets/authors/author-16.jpeg",
+        "userEmail": "olivia.johnson@example.com",
+        "rating": 5,
+        "review": "An incredible adventure! The river was wild, and the scenery was stunning. Highly recommend!",
+        "reviewDate": "2023-06-15T00:00:00.000Z"
+      }
+    ],
+    "images": [
+      {
+        "imageId": "img017",
+        "path": "/src/assets/package-details-page/rafting-1.jpg",
+        "altText": "Whitewater rafting on the Colorado River"
+      },
+      {
+        "imageId": "img018",
+        "path": "/src/assets/package-details-page/rafting-2.jpg",
+        "altText": "Raft navigating the rapids"
+      }
+    ],
+    "offers": {
+      "specialOffer": true,
+      "earlyBird": false,
+      "lastMinute": false
+    }
+  }
+  
+}

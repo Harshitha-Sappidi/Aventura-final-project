@@ -1,0 +1,54 @@
+.formContainer {
+  margin-top: 100px;
+
+  @media (max-width: 768px) {
+    margin-top: 50px;
+    padding: 0 16px; // Add padding for smaller screens to prevent content from touching the edges
+  }
+}
+
+.ratingStars {
+  margin-bottom: 16px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 12px;
+  }
+}
+
+.reviewInput {
+  margin-bottom: 16px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 12px;
+  }
+}
+
+.submitButton {
+  display: block;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    width: 100%; // Ensure the button is full-width on smaller screens
+    padding: 10px; // Add padding for better touch targets on mobile
+  }
+}
+
+.uploadButton {
+  text-transform: none;
+
+  @media (max-width: 768px) {
+    width: 100%; // Full width for mobile
+  }
+}
+
+.reviewImage {
+  width: 100px;
+  height: 100px;
+  margin-top: 16px;
+
+  @media (max-width: 768px) {
+    width: 80px;
+    height: 80px;
+    margin-top: 12px;
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "person": {
+        "firstName": "Test-firstName",
+        "lastName": "test-lastName",
+        "address": "149 centre st",
+        "zipcode": "02119",
+        "phoneNumber": "8888888",
+        "isActive": true
+    },
+    
+    "username": "test-username",
+    "password": "test-password"
+}

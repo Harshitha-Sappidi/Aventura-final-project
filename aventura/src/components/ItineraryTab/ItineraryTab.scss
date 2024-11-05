@@ -1,0 +1,121 @@
+.itinerary-tab {
+    padding: 20px;
+    position: relative;
+  }
+  
+  .itinerary-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .itinerary-circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-right: 20px;
+  }
+  
+  .itinerary-circle {
+    background-color: #47a0ff;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .itinerary-number {
+    margin: 0;
+  }
+  
+  .itinerary-line {
+    width: 2px;
+    background-color: #47a0ff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    height: calc(100% - 40px);
+  }
+  
+  .itinerary-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+  }
+  
+  .itinerary-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .itinerary-description {
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .itinerary-item {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  
+    .itinerary-circle-container {
+      margin-right: 0;
+      margin-bottom: 10px;
+      align-items: flex-start;
+    }
+  
+    .itinerary-line {
+      display: none;
+    }
+  
+    .itinerary-content {
+      padding: 15px;
+    }
+  
+    .itinerary-circle {
+      width: 35px;
+      height: 35px;
+      font-size: 1.2rem;
+    }
+  
+    .itinerary-title {
+      font-size: 1.1rem;
+    }
+  
+    .itinerary-description {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .itinerary-content {
+      padding: 10px;
+    }
+  
+    .itinerary-circle {
+      width: 30px;
+      height: 30px;
+      font-size: 1rem;
+    }
+  
+    .itinerary-title {
+      font-size: 1rem;
+    }
+  
+    .itinerary-description {
+      font-size: 0.85rem;
+    }
+  }
+  

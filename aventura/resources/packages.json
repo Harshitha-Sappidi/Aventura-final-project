@@ -1,0 +1,147 @@
+[
+    {
+        "packageId": "pkg001",
+        "title": "Ultimate USA Adventure",
+        "description": "Explore the stunning landscapes and vibrant cities of the USA. From the bustling streets of New York to the serene beauty of the Grand Canyon, this adventure has it all.",
+        "oldPrice": 3500,
+        "newPrice": 2999,
+        "duration": 10,
+        "level": "Moderate",
+        "physicality": "7/10",
+        "ratings": 4,
+        "tags": [
+          "USA",
+          "landscapes",
+          "cities",
+          "adventure"
+        ],
+        "category": "Adventure",
+        "cardImage": "/src/assets/alaska-720x606.jpg",
+        "ticketCount": 5,
+        "bookingCount": 7,
+        "destination": {
+          "city": "New York",
+          "country": "USA",
+          "coordinates": "40.7128, -74.0060",
+          "id": "66aea3322ca837d1efab01b5"
+        },
+        "details": {
+          "age": 18,
+          "detailDescription": "This package includes visits to major cities, national parks, and cultural landmarks across the USA. Enjoy guided tours, city excursions, and nature hikes.",
+          "departureLocation": "New York City Airport",
+          "departureTiming": "Please arrive at least 2 hours before the flight.",
+          "availability": "Year-round",
+          "essentials": [
+            "comfortable shoes",
+            "camera",
+            "passport"
+          ],
+          "included": [
+            "accommodation",
+            "meals",
+            "guides"
+          ],
+          "notIncluded": [
+            "international airfare",
+            "personal expenses"
+          ],
+          "id": "66aea3322ca837d1efab01b6"
+        },
+        "itinerary": [
+          {
+            "activityTitle": "New York City Tour",
+            "activityDescription": "Explore the iconic landmarks of New York City including Times Square, Central Park, and the Statue of Liberty.",
+            "id": "66aea3322ca837d1efab01b7"
+          },
+          {
+            "activityTitle": "Grand Canyon Hike",
+            "activityDescription": "Experience a guided hike through the majestic Grand Canyon, with stunning views and informative insights.",
+            "id": "66aea3322ca837d1efab01b8"
+          }
+        ],
+        "reviewItems": [
+          {
+            "reviewItemId": "rev001",
+            "userId": "user001",
+            "userName": "John Doe",
+            "userPicture": "/src/assets/authors/author-1.jpeg",
+            "userEmail": "john.doe@example.com",
+            "rating": 5,
+            "review": "An amazing trip! Everything was well-organized and the sights were breathtaking.",
+            "reviewDate": "2015-08-01T00:00:00.000Z",
+            "id": "66aea3322ca837d1efab01b9"
+          },
+          {
+            "reviewItemId": "rev002",
+            "userId": "user002",
+            "userName": "Jane Smith",
+            "userPicture": "/src/assets/authors/author-2.jpeg",
+            "userEmail": "jane.smith@example.com",
+            "rating": 4,
+            "review": "Great experience with some minor hiccups. Overall, a trip to remember.",
+            "reviewDate": "2014-09-14T00:00:00.000Z",
+            "id": "66aea3322ca837d1efab01ba"
+          },
+          {
+            "reviewItemId": "rev003",
+            "userId": "new-user-id",
+            "userName": "sad",
+            "userPicture": "",
+            "userEmail": "sad@gmail.com",
+            "rating": 3,
+            "review": "asdaas",
+            "reviewDate": "2024-08-03T19:25:49.134Z",
+            "id": "66aea3322ca837d1efab01bb"
+          },
+          {
+            "reviewItemId": "rev004",
+            "userId": "new-user-id",
+            "userName": "Sharan",
+            "userPicture": "",
+            "userEmail": "aa@gmail.com",
+            "rating": 0,
+            "review": "test",
+            "reviewDate": "2024-08-03T21:37:43.547Z",
+            "id": "66aea3322ca837d1efab01bc"
+          },
+          {
+            "reviewItemId": "rev005",
+            "userId": "new-user-id",
+            "userName": "tets",
+            "userPicture": "",
+            "userEmail": "aa@gmail.com",
+            "rating": 4,
+            "review": "test",
+            "reviewDate": "2024-08-03T21:37:54.880Z",
+            "id": "66aea3322ca837d1efab01bd"
+          }
+        ],
+        "images": [
+          {
+            "imageId": "img001",
+            "path": "/src/assets/niagara-falls-1.jpg",
+            "altText": "Stunning view of the Grand Canyon",
+            "id": "66aea3322ca837d1efab01be"
+          },
+          {
+            "imageId": "img002",
+            "path": "/src/assets/niagara-falls-2.jpg",
+            "altText": "Cityscape of New York at night",
+            "id": "66aea3322ca837d1efab01bf"
+          },
+          {
+            "imageId": "img003",
+            "path": "/src/assets/niagara-falls-3.jpg",
+            "altText": "Stunning view of the Grand Canyon",
+            "id": "66aea3322ca837d1efab01c0"
+          },
+          {
+            "imageId": "img004",
+            "path": "/src/assets/niagara-falls-4.jpg",
+            "altText": "Stunning view of the Grand Canyon",
+            "id": "66aea3322ca837d1efab01c1"
+          }
+        ],
+        "id": "66ae84222ca837d1efab001f"
+      }
+]

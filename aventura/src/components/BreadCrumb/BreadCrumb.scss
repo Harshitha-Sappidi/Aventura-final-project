@@ -1,0 +1,33 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  color: #3f51b5;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-bottom: 12px;
+  }
+}
+
+.breadcrumb-link {
+  color: #3f51b5;
+  text-decoration: none;
+  margin-right: 8px;
+
+  &:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 4px;
+  }
+}
+
+.breadcrumb-separator {
+  margin-right: 8px;
+
+  @media (max-width: 768px) {
+    margin-right: 4px;
+  }
+}

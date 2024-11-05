@@ -1,0 +1,88 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.list-container {
+    width: 80%;
+    margin: auto;
+}
+
+.results-container {
+    margin: 1rem 1rem 0 1rem;
+}
+
+.results-count {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.filter-container {
+    width: 25%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    position: -webkit-sticky; // For Safari
+    position: sticky;
+    top: 0; // Adjust as needed
+    align-self: flex-start; // Keeps the container aligned to the top of the flex container
+    height: calc(100vh - 2rem); // Ensure the container height doesn't exceed viewport height, adjust '2rem' as needed for padding/margin
+    // overflow: auto; // Adds scroll if the content exceeds the container's height
+}
+
+.package-list-container {
+    width: 75%;
+    padding: 0 1rem;
+}
+
+// Media queries for responsiveness
+@media screen and (max-width: 1200px) {
+    .filter-container {
+        width: 30%;
+    }
+    .package-list-container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .filter-container {
+        width: 35%;
+    }
+    .package-list-container {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .filter-container,
+    .package-list-container {
+        width: 100%;
+        padding: 0;
+        height: auto;
+        position: relative;
+    }
+
+    .results-container {
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .results-count {
+        font-size: 1rem;
+    }
+
+    .filter-container {
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .package-list-container {
+        padding: 0 0.5rem;
+    }
+}

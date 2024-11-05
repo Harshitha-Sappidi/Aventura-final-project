@@ -1,0 +1,18 @@
+.commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.formRow {
+  margin-bottom: 16px; 
+}
+
+.formField.fullWidth {
+  width: 100%;
+}
+
+.buttonContainer {
+  margin-top: 16px;
+}

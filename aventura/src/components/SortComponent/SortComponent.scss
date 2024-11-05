@@ -1,0 +1,38 @@
+.sort-box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .MuiFormControl-root {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sort-box {
+    margin-bottom: 0.75rem;
+    padding: 1rem;
+  }
+
+  .MuiFormControl-root {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .sort-box {
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .MuiFormControl-root {
+    width: 100%;
+  }
+}
