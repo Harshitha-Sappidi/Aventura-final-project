@@ -16,8 +16,6 @@ The "Aventura" project aims to provide a holistic platform for adventure enthusi
 
 - Users can personalize their profiles with profile pictures, bios, and favorite destinations.
 
-
-
 ### Adventure Listings
 
 #### Adventure Database
@@ -83,7 +81,6 @@ The "Aventura" project aims to provide a holistic platform for adventure enthusi
 #### Order and Payment Integration
 
 - Users can add essential items to the cart, manage quantities, and proceed to checkout.Complete the purchase with a secure payment gateway using Stripe.Track orders and view order history.
-
 
 ## Object Domain Model (Mermaid Code)
 
@@ -234,6 +231,7 @@ classDiagram
 ## REST API resources
 
 ### Users
+
     • GET /users: Retrieve a list of users
     • POST /users: Create a new user
     • GET /users/{userId}: Retrieve a specific user by ID
@@ -241,18 +239,23 @@ classDiagram
     • DELETE /users/{userId}: Delete a specific user by ID
 
 ### Tours
+
     • GET /packages: Retrieve a list of trips
     • POST /packages: Create a new trip
     • GET /packages/{packageId}: Retrieve a specific trip by ID
     • PUT /packages/{packageId}: Update a specific trip by ID
     • DELETE /packages/{packageId}: Delete a specific trip by ID
+
 ### Orders
+
     • GET /products: Retrieve a list of orders
     • POST /products: Create a new order
     • GET /products/{productId}: Retrieve a specific order by ID
     • PUT /products/{productId}: Update a specific order by ID
     • DELETE /products/{productId}: Delete a specific order by ID
+
 ### Blogs
+
     • GET /blogs: Retrieve a list of forum posts
     • POST /blogs: Create a new forum post
     • GET /blogs/{blogId}: Retrieve a specific forum post by ID
@@ -260,19 +263,18 @@ classDiagram
     • DELETE /blogs/{blogId}: Delete a specific forum post by ID
 
 ## External APIs
+
     https://docs.mapbox.com/
     https://stripe.com/docs/payments
     https://openweathermap.org/guide
     https://recharts.org/en-US/guide
     https://www.emailjs.com/
-    
-
 
 ## Instructions to use the repo
 
     You can clone the repo by using HTTP:
 
-    https://github.com/info-6150-summer-2024/final-project-web-wizards.git
+https://github.com/Harshitha-Sappidi/Aventura-final-project
 
     OR set up the SSH Key using: git@github.com:info-6150-summer-2024/final-project-web-wizards.git
 
@@ -282,20 +284,6 @@ classDiagram
 
 ## Contributers
 
-    Name   : Sharan Kumar Prabhakaran
-    NUID   : 002831828
-    Email  : prabhakaran.sh@northeastern.edu
-
     Name   : Harshitha Sappidi
     NUID   : 002416707
     Email  : sappidi.h@northeastern.edu
-
-    Name   : Bhavani Devulapalli
-    NUID   : 002436798
-    Email  : devulapalli.b@northeastern.edu
-
-    Name   : Nidhi Lade
-    NUID   : 002415277
-    Email  : lade.ni@northeastern.edu
-
-    Github : https://github.com/info-6150-summer-2024/final-project-web-wizards
